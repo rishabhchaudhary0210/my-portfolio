@@ -1,9 +1,14 @@
 import './Home.css';
+import {useEffect} from 'react';
 
 export default function Home() {
-    return (
-        <div className="home" id='home'>
-            <div className="sub-home">
+    
+    // useEffect(()=>{
+        //     subhome.classList.add('animate');
+        // },[]);
+        return (
+            <div className="home" id='home'>
+            <div className="sub-home animate">
                 <div className="name-box box">
                     <span className='hello'>👋</span>
                     <div>
