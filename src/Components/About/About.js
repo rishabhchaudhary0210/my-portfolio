@@ -6,7 +6,7 @@ export default function About() {
             <h1 className="heading">
                 ABOUT <span>ME</span>
             </h1>
-            <div className="about-cont">
+            <div className="about-cont reveal-left animate">
                 <div className="skill-head">
                     <h1><span>FRONTEND</span> DEVELOPER</h1>
                 </div>
@@ -36,7 +36,7 @@ export default function About() {
                 </div>
             </div>
 
-            <div className="about-cont">
+            <div className="about-cont reveal-right animate">
                 <div className="skill-cont">
 
 
@@ -66,7 +66,7 @@ export default function About() {
                 </div>
             </div>
 
-            <div className="about-cont">
+            <div className="about-cont reveal-left animate">
                 <div className="skill-head">
                     <h1><span>MORE</span> TECH</h1>
                 </div>

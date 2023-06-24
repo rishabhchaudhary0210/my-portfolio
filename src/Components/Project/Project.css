@@ -1,5 +1,4 @@
-
-.project{
+.project {
     background-color: var(--bg-clr);
     width: 101vw;
     padding: 50px 15vw;
@@ -7,7 +6,8 @@
     flex-direction: column;
     align-items: center;
 }
-.project-cont{
+
+.project-cont {
     width: 100%;
     margin: 0 50px;
     border: 2px solid var(--sec-clr);
@@ -15,12 +15,13 @@
     padding: 30px;
     overflow-x: scroll;
     display: flex;
-    gap: 30px;
+    gap: 45px;
     position: relative;
 }
-.project-cont::-webkit-scrollbar{
+
+.project-cont::-webkit-scrollbar {
     height: 4px;
-    opacity: 0.7; 
+    opacity: 0.7;
 }
 
 /* .prevbtn, .nextbtn{
@@ -38,10 +39,9 @@
     right: 0;
 } */
 
-.project-item{
-    min-width: 250px;
-    max-width: 250px;
-    /* height: 250px; */
+.project-item {
+    min-width: 270px;
+    max-width: 270px;
     background-color: white;
     padding: 20px 14px;
     margin: 0 auto;
@@ -49,27 +49,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
+    position: relative;
 }
-.project-thumb{
+
+.project-thumb {
     width: 100%;
-    height: 150px;
+    height: 170px;
     background-color: grey;
     border-radius: 10px;
     cursor: pointer;
     position: relative;
     margin: 0 auto;
 }
-.project-thumb>img{
-    height:100%;
-    width:100%;
+
+.project-thumb>img {
+    height: 100%;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
 }
-.project-links{
+
+.project-links {
     opacity: 0;
-    transition: all 0.1s ;
+    transition: all 0.1s;
     height: 100%;
     width: 100%;
     z-index: 10;
@@ -81,85 +85,118 @@
     align-items: center;
     gap: 30px;
 }
-.project-links a{
+
+.project-links a {
     z-index: 5;
     width: 50px;
     height: 50px;
     background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 50%  ;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.project-links span{
+.project-links a:hover{
+    transition: all 0.2s ease;
+    scale: 0.9;
+}
+.project-links span {
     height: 25px;
     width: 25px;
-    color:#fff;
+    color: #fff;
     overflow: hidden;
 }
-.project-links svg{
+
+.project-links svg {
     height: 25px;
     width: 25px;
 }
-.project-item:hover{
-    transition: all 0.8s ease;
-    scale: 1.07;
+
+.project-item:hover {
+    box-shadow: 1px 0px 5px white;
 }
-.project-item:hover img, .project-thumb:hover img{
+
+.project-item:hover img,
+.project-thumb:hover img {
     opacity: 0.4;
     z-index: 1;
 }
-.project-item:hover .project-links, .project-thumb:hover .project-links{
+
+.project-item:hover .project-links,
+.project-thumb:hover .project-links {
     opacity: 1;
 }
-.project-info{
+
+.project-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+    position: relative;
 }
-.project-info .project-head{
+
+.project-info .project-head {
     font-size: 1.2rem;
     width: 100%;
     text-align: center;
     border-bottom: 1px solid grey;
 }
-.project-info .project-text{
+
+.project-info .project-text {
     color: grey;
     font-size: 0.9rem;
     padding: 5px 5px 0 5px;
 }
 
+.project-skill-cont {
+    padding: 2px 0;
+    margin-top: 8px;
+    align-self: flex-start;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-skill {
+    padding: 3px 10px;
+    margin: 3px 5px;
+    font-size: 0.8rem;
+    border-radius: 15px;
+    background-color: rgb(187, 187, 187);
+    color: white;
+}
+
 @media screen and (max-width:1200px) {
-    .project{
+    .project {
         padding: 50px 10vw;
     }
-    .project-cont{
+
+    .project-cont {
         gap: 15px;
     }
-    .project-item{
+
+    .project-item {
         width: 220px;
     }
 }
+
 @media screen and (max-width:950px) {
-    .project{
+    .project {
         padding: 50px 8vw;
     }
-    .project-cont{
+
+    .project-cont {
         grid-template-columns: 1fr 1fr;
     }
 }
-@media screen and (max-width:570px) {
-    .project-item{
-        width: 200px;
-    }
-}
+
 @media screen and (max-width:520px) {
-    .project-cont{
+    .project-cont {
         grid-template-columns: 1fr;
     }
-   .project-item{
-    width: 240px;
-   }
+
+    .project-item {
+        min-width: 240px;
+    }
 }

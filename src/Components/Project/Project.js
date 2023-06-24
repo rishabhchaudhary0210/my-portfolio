@@ -13,12 +13,13 @@ export default function Project() {
     //     projectcont.scrollLeft = projectcont.scrollLeft + width;
     // }
 
+
     return (
         <div className='project' id='projects'>
-            <div className="heading">
+            <div className="heading reveal-bottom animate">
                 <span>P</span>ROJECTS
             </div>
-            <div className="project-cont">
+            <div className="project-cont reveal-bottom animate">
                 {/* <button className="prevbtn" onClick={handlePrevBtn}>&lt;</button>
                 <button className="nextbtn" onClick={handleNextBtn}>&gt;</button> */}
                 <ProjectCard 
@@ -26,36 +27,41 @@ export default function Project() {
                     viewLink="https://the-daily-journal-blogs.vercel.app/"
                     codeLink="https://github.com/rishabhchaudhary0210/The-Daily-Journal"
                     head="The Daily Journal"
-                    text="A Blogging App to journal your experiences and life stories. Frontend made using HTML, CSS, JS connecting to a Node and Express Backend and MongoDB as Database to store the Blogs."
+                    text="A fullstack blogging App to journal your experiences and life stories and help you share your ideas."
+                    skills={["HTML", "CSS", "JS", "NodeJs", "ExpressJs", "MongoDB"]}
                 />
 
                 <ProjectCard 
-                    image="https://img.freepik.com/premium-vector/red-shopping-basket-with-groceries_24908-68369.jpg?w=740"
-                    viewLink="https://github.com/rishabhchaudhary0210"
-                    codeLink="https://github.com/rishabhchaudhary0210"
+                    image="https://img.freepik.com/free-vector/supermarket-food-shelves-eggplant-cabbage-carrot-peppers-onions-corn-bread-potatoes-shopping-fresh-vector-illustration_1284-46271.jpg?w=740&t=st=1687610989~exp=1687611589~hmac=04fc53c8e57b3eaf22ac68bf2f93c622bc257c2ec3c549c95faa63520dfa755c"
+                    viewLink="https://rishabhchaudhary0210.github.io/Grocery-Website/"
+                    codeLink="https://github.com/rishabhchaudhary0210/Grocery-Website"
                     head="GROCO-Grocery Store"
-                    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, adipisci quae error hic ab quos vero atque eveniet earum esse?"
+                    text="A website to fulfill your daily grocery needs. "
+                    skills={["HTML", "CSS", "JS", "SwiperJs"]}
                 />
                 <ProjectCard 
-                    image="https://img.freepik.com/free-vector/hand-drawn-web-developers_23-2148819604.jpg?size=626&ext=jpg"
-                    viewLink="https://github.com/rishabhchaudhary0210"
-                    codeLink="https://github.com/rishabhchaudhary0210"
-                    head="head-1"
-                    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, adipisci quae error hic ab quos vero atque eveniet earum esse?"
+                    image="https://img.freepik.com/free-vector/people-analyzing-growth-charts_23-2148866843.jpg?w=740&t=st=1687604447~exp=1687605047~hmac=5024c2419663ca5df620320ffaa2c732fa678a4c3d78dda0f4bf11074860555d"
+                    viewLink="https://rishabhchaudhary0210.github.io/Admin-Dashboard/"
+                    codeLink="https://github.com/rishabhchaudhary0210/Admin-Dashboard"
+                    head="Admin DashBoard"
+                    text="A fully responsive and modern dashboard design to help you keep full track of your business analytics."
+                    skills={["HTML", "CSS", "JS"]}
                 />
                 <ProjectCard 
-                    image="https://img.freepik.com/free-vector/hand-drawn-web-developers_23-2148819604.jpg?size=626&ext=jpg"
-                    viewLink="https://github.com/rishabhchaudhary0210"
-                    codeLink="https://github.com/rishabhchaudhary0210"
-                    head="head-1"
-                    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, adipisci quae error hic ab quos vero atque eveniet earum esse?"
+                    image="https://img.freepik.com/free-vector/businessman-holding-pencil-big-complete-checklist-with-tick-marks_1150-35019.jpg?w=740&t=st=1687606077~exp=1687606677~hmac=f5a51e52bf6d13c57420ab49775b4d8d89c6f6b38d682c6f8c6f5b90405c1b54"
+                    viewLink="https://github.com/rishabhchaudhary0210/to-do-list"
+                    codeLink="https://github.com/rishabhchaudhary0210/to-do-list"
+                    head="To-Do-List"
+                    text="A basic to-do-list webApp with database connectivity to help you track your daily tasks."
+                    skills={["HTML", "CSS", "JS", "NodeJs", "ExpressJs", "MongoDB"]}
                 />
                 <ProjectCard 
-                    image="https://img.freepik.com/free-vector/hand-drawn-web-developers_23-2148819604.jpg?size=626&ext=jpg"
-                    viewLink="https://github.com/rishabhchaudhary0210"
-                    codeLink="https://github.com/rishabhchaudhary0210"
-                    head="head-1"
-                    text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, adipisci quae error hic ab quos vero atque eveniet earum esse?"
+                    image="https://img.freepik.com/free-vector/yellow-lined-notepaper-journal-sticker-vector_53876-168271.jpg?w=740&t=st=1687606313~exp=1687606913~hmac=e4b12528dcf51c91f11d49a410919b2729786af31c669d20d075aed1323ea91e"
+                    viewLink="https://note-keeper-mu.vercel.app/"
+                    codeLink="https://github.com/rishabhchaudhary0210https://github.com/rishabhchaudhary0210/NoteKeeper"
+                    head="NoteKeeper"
+                    text="A react based note making app so that you don't have to be scared of forgetting your imprompt ideas."
+                    skills={["ReactJS","HTML","CSS","JS"]}
                 />
                
             </div>

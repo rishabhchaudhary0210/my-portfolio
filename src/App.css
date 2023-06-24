@@ -9,7 +9,7 @@
 ::-webkit-scrollbar{
     background-color: var(--bg-clr);
     width: 7px;
-    box-shadow: inset 0 0 5px grey;
+    /* box-shadow: inset 0 0 5px blue; */
 }
 ::-webkit-scrollbar:hover{
     width: 9px;
@@ -26,4 +26,28 @@
 }
 body{
     background-color: var(--bg-clr);
+}
+
+.reveal-left{
+    transition: all 1.5s ease;
+    transform: translateX(-300px);
+    opacity: 0;
+}
+.reveal-right{
+    transition: all 1.5s ease;
+    transform: translateX(300px);
+    opacity: 0;
+}
+.reveal-bottom{
+    transition: all 1.5s ease;
+    transform: translateY(300px);
+    opacity: 0;
+}
+.reveal-left.animate, .reveal-right.animate{
+    transform: translateY(0);
+    opacity: 1;
+}
+.reveal-bottom.animate{
+    transform: translateY(0);
+    opacity: 1;
 }

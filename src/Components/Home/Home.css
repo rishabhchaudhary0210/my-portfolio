@@ -16,17 +16,6 @@
     justify-content: center;
     /* display: none; */
 }
-.sub-home.animate{
-    animation: slidein 2s ease ;
-}
-@keyframes slidein{
-    0%{
-        transform: translateX(-150px);
-    }
-    95%{
-        transform: translateX(0px);
-    }
-}
 .box{
     background-color:white;
     border-radius: 10px;

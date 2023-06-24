@@ -1,15 +1,16 @@
 import './Home.css';
-import {useEffect} from 'react';
+// import { useEffect, useRef } from 'react';
 
 export default function Home() {
-    
+
+    // const divref = useRef();
     // useEffect(()=>{
-        //     subhome.classList.add('animate');
-        // },[]);
-        return (
-            <div className="home" id='home'>
+    //     console.log("My ref", divref.current);
+    // },[])
+    return (
+        <div className="home" id='home'>
             <div className="sub-home animate">
-                <div className="name-box box">
+                <div className="name-box box reveal-left animate">
                     <span className='hello'>👋</span>
                     <div>
                         <span className="name">
@@ -20,7 +21,7 @@ export default function Home() {
                         </h1>
                     </div>
                 </div>
-                <div className="title-box box">
+                <div className="title-box box reveal-right animate">
                     <h3>
                         Web Developer
                     </h3>
@@ -31,11 +32,11 @@ export default function Home() {
                         Upcoming Engineer
                     </h3>
                 </div>
-                <div className="info-box box">
+                <div className="info-box box reveal-bottom animate">
                     I'm currently pursuing my B.Tech. in Computer Science Engineering where I have gained extensive knowledge about computers and programming. I am a hardworking and dedicated individual with a passion for technology. With a fairly strong hold of logical and problem solving skills I push harder to get better every day.
                 </div>
-                <a href="https://drive.google.com/file/d/1lEvZ0-izYGpnH4V51XmhLNzMDbVTF2a2/view?usp=drivesdk"  target='_blank' rel="noreferrer" download className="download">
-                    <span class="material-symbols-outlined">download</span> 
+                <a href="https://drive.google.com/file/d/1lEvZ0-izYGpnH4V51XmhLNzMDbVTF2a2/view?usp=drivesdk" target='_blank' rel="noreferrer" download className="download reveal-bottom animate">
+                    <span class="material-symbols-outlined">download</span>
                     Download Resume
                 </a>
             </div>
