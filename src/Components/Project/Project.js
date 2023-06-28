@@ -1,25 +1,23 @@
 import './Project.css';
 import ProjectCard from './Project-card';
+import {useRef, useEffect, useState} from 'react';
 
 export default function Project() {
-    // let projectcont = document.querySelector('.project-cont');
-
-    // const handlePrevBtn = () => {
-    //     let width = projectcont.clientWidth;
-    //     projectcont.scrollLeft = projectcont.scrollLeft - "250px";
-    // }
-    // const handleNextBtn = () => {
-    //     let width = projectcont.clientWidth;
-    //     projectcont.scrollLeft = projectcont.scrollLeft + width;
-    // }
-
-
+    const [projectVisible, setProjectVisible] = useState();
+    const projectRef = useRef();
+    useEffect(()=>{
+        const observer = new IntersectionObserver((entries)=>{
+            const entry = entries[0];
+            setProjectVisible(entry.isIntersecting);
+        })
+        observer.observe(projectRef.current);
+    })
     return (
-        <div className='project' id='projects'>
-            <div className="heading reveal-bottom animate">
+        <div ref={projectRef} className='project' id='projects'>
+            <div className={`heading reveal-left ${projectVisible ? "animate" : ""}`}>
                 <span>P</span>ROJECTS
             </div>
-            <div className="project-cont reveal-bottom animate">
+            <div className={`project-cont reveal-right ${projectVisible ? "animate" : ""}`}>
                 {/* <button className="prevbtn" onClick={handlePrevBtn}>&lt;</button>
                 <button className="nextbtn" onClick={handleNextBtn}>&gt;</button> */}
                 <ProjectCard 

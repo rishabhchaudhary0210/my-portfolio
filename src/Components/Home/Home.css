@@ -6,15 +6,16 @@
     background-size: cover;
     background-position: left top;
     background-clip: border-box;
-    /* padding: 0 220px; */
 }
 .sub-home{
-    padding:0 27vw;
-    padding-top: 120px;
+    /* padding:0 27vw; */
+    margin: 0 auto;
+    padding-top: 130px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* display: none; */
+    max-width: 680px;
+    overflow: hidden;
 }
 .box{
     background-color:white;
@@ -82,25 +83,19 @@
     background-color: white;
     color: var(--sec-clr);
     border: 3px solid var(--sec-clr);
+    filter: brightness(1);
 }
 .download span{
     overflow: hidden;
 }
 
-@media only screen and (max-width:1280px){
-    .sub-home{
-        padding-left: 20vw;
-        padding-right: 20vw;
-    }
-}
-
-@media only screen and (max-width:950px){
+@media only screen and (max-width:850px){
     html{
-        font-size: 80%;
+        font-size: 85%;
     }
     .sub-home{
-        padding-left: 15vw;
-        padding-right: 15vw;
+        max-width: 570px;
+        padding-top: 150px;
     }
     .name-box{
         height: 120px;
@@ -112,16 +107,23 @@
     }
 }
 
-@media only screen and (max-width:700px){
+@media only screen and (max-width:630px){
     .sub-home{
-        padding-left: 10vw;
-        padding-right: 10vw;
+        max-width: 510px;
     }
 }
 
-@media screen and (max-width:530px) {
+@media screen and (max-width:550px) {
     .sub-home{
-        padding-left: 5vw;
-        padding-right: 5vw;
+        max-width: 450px;
+    }
+}
+@media screen and (max-width:480px) {
+    html{
+        font-size: 80%;
+    }
+    .sub-home{
+        max-width: 330px;
+        gap: 10px;
     }
 }

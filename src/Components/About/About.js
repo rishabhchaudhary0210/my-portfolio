@@ -1,12 +1,25 @@
 import './About.css';
+import {useRef, useEffect, useState} from 'react';
 
 export default function About() {
+    const aboutRef = useRef();
+    const [aboutVisible, setAboutVisible] = useState();
+
+    useEffect(()=>{
+        const observer = new IntersectionObserver((entries)=>{
+            const entry = entries[0];
+            console.log(aboutVisible);
+            setAboutVisible(entry.isIntersecting);
+        })
+        observer.observe(aboutRef.current);
+    });
+
     return (
-        <div className="about" id="about">
-            <h1 className="heading">
+        <div ref={aboutRef} id="about" className="about" >
+            <h1 className={`heading reveal-bottom ${aboutVisible ? "animate" : ""}`}>
                 ABOUT <span>ME</span>
             </h1>
-            <div className="about-cont reveal-left animate">
+            <div className={`about-cont reveal-left ${aboutVisible ? "animate" : ""}`}>
                 <div className="skill-head">
                     <h1><span>FRONTEND</span> DEVELOPER</h1>
                 </div>
@@ -36,7 +49,7 @@ export default function About() {
                 </div>
             </div>
 
-            <div className="about-cont reveal-right animate">
+            <div className={`about-cont reveal-right ${aboutVisible ? "animate" : ""}`}>
                 <div className="skill-cont">
 
 
@@ -66,8 +79,9 @@ export default function About() {
                 </div>
             </div>
 
-            <div className="about-cont reveal-left animate">
-                <div className="skill-head">
+            <div className={`about-cont reveal-left ${aboutVisible ? "animate" : ""}`}>
+                <div className="skill-head"
+                    style={{ 'text-align': "left", }}>
                     <h1><span>MORE</span> TECH</h1>
                 </div>
                 <div className="skill-cont">

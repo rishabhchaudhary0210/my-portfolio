@@ -6,6 +6,10 @@
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+:root{
+    --bg-clr: rgb(18,23,29);
+    --sec-clr: rgb(69, 69, 247);
+}
 ::-webkit-scrollbar{
     background-color: var(--bg-clr);
     width: 7px;
@@ -19,32 +23,32 @@
     background-color: var(--sec-clr);
 }
 
-:root{
-    --bg-clr: rgb(18,23,29);
-    --sec-clr: rgb(69, 69, 247);
-
-}
 body{
     background-color: var(--bg-clr);
 }
 
+#home, #about, #project, #contact{
+    margin-bottom: 50px;
+}
+
+
 .reveal-left{
-    transition: all 1.5s ease;
+    transition: transform 2s ease, opacity 2s ease;
     transform: translateX(-300px);
     opacity: 0;
 }
 .reveal-right{
-    transition: all 1.5s ease;
+    transition: transform 2s ease, opacity 2s ease;
     transform: translateX(300px);
     opacity: 0;
 }
 .reveal-bottom{
-    transition: all 1.5s ease;
+    transition: transform 2s ease, opacity 2s ease;
     transform: translateY(300px);
     opacity: 0;
 }
 .reveal-left.animate, .reveal-right.animate{
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
 }
 .reveal-bottom.animate{

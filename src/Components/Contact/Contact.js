@@ -1,5 +1,7 @@
 import './Contact.css';
 import emailjs from 'emailjs-com';
+import {useRef, useEffect, useState} from 'react';
+
 
 export default function Contact() {
 
@@ -16,14 +18,21 @@ export default function Contact() {
         e.target.message.value = '';
         console.log("form submitted");
     }
-
+    const [contactVisible, setContactVisible] = useState();
+    const contactRef = useRef();
+    useEffect(()=>{
+        const observer = new IntersectionObserver((entries)=>{
+            const entry = entries[0];
+            setContactVisible(entry.isIntersecting);
+        })
+        observer.observe(contactRef.current);
+    })
     return (
-        <>
-            <div className="contact reveal-bottom animate" id="contact">
-                <div className="heading">
+            <div ref={contactRef} className="contact" id="contact">
+                <div className={`heading reveal-bottom ${contactVisible ? "animate" : ""}`}>
                     CONTACT <span>ME</span>
                 </div>
-                <div className="contact-box">
+                <div className={`contact-box reveal-left ${contactVisible ? "animate" : ""}`}>
                     <form action="" onSubmit={onSubmitForm} className='contact-form'>
                         <label htmlFor="name">Name :</label>
                         <input type="text" name="name" id="name" placeholder='Enter Your Name' />
@@ -35,14 +44,7 @@ export default function Contact() {
                     </form>
                 </div>
             </div>
-            <div className="social-links">
-                <a href="https://github.com/rishabhchaudhary0210" target='_blank' rel="noreferrer">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt='Github' />
-                </a>
-                <a href="https://www.linkedin.com/in/rishabh-chaudhary-108564154" target='_blank' rel="noreferrer" >
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt='Linkedin' />
-                </a>
-            </div>
-        </>
+            
+        
     );
 }

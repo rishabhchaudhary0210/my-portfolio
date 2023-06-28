@@ -1,0 +1,43 @@
+footer{
+    background-color: var(--bg-clr);
+    border-top: 2px solid white;
+    color: white;
+    min-height: 120px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.icons{
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.icon-links{
+    text-decoration: none;
+    font-size: 2rem;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-links:hover{
+    background-color: var(--sec-clr);
+}
+.icon-links:hover i{
+    color: white;
+}
+
+.icon-links i{
+    color: var(--sec-clr);
+}
+
