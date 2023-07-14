@@ -8,7 +8,7 @@ export default function Navbar() {
     }
     return (
         <div className={active ? "navbar active" : "navbar" }>
-            <a href="#home">
+            <a href="#home" class="logo">
                 <img src={logo} alt="Icon" />
             </a>
             <ul className={active ? "navList active" : "navList"}>

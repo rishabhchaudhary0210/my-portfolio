@@ -1,5 +1,6 @@
 import './Project.css';
 import ProjectCard from './Project-card';
+import projectData from './Project-data';
 import {useRef, useEffect, useState} from 'react';
 
 export default function Project() {
@@ -18,15 +19,30 @@ export default function Project() {
                 <span>P</span>ROJECTS
             </div>
             <div className={`project-cont reveal-right ${projectVisible ? "animate" : ""}`}>
-                {/* <button className="prevbtn" onClick={handlePrevBtn}>&lt;</button>
-                <button className="nextbtn" onClick={handleNextBtn}>&gt;</button> */}
-                <ProjectCard 
+               {
+                projectData.map(element => 
+                    <ProjectCard
+                        image={element.image}
+                        viewLink={element.viewLink}
+                        codeLink={element.codeLink}
+                        head={element.head}
+                        text={element.text}
+                        skills={element.skills}
+                    />
+                )
+               }
+            </div>
+        </div>
+    );
+}
+                // eslint-disable-next-line no-lone-blocks
+                {/* <ProjectCard 
                     image="https://img.freepik.com/free-vector/blogging-fun-content-creation-online-streaming-video-blog-young-girl-making-selfie-social-network-sharing-feedback-self-promotion-strategy-vector-isolated-concept-metaphor-illustration_335657-855.jpg?w=740&t=st=1687537556~exp=1687538156~hmac=53ab2f572a80f79677c178dfe4b105a497364ff4350569ce0042d0c83d426ea2"
                     viewLink="https://the-daily-journal-blogs.vercel.app/"
                     codeLink="https://github.com/rishabhchaudhary0210/The-Daily-Journal"
                     head="The Daily Journal"
                     text="A fullstack blogging App to journal your experiences and life stories and help you share your ideas."
-                    skills={["HTML", "CSS", "JS", "NodeJs", "ExpressJs", "MongoDB"]}
+                    skills={["HTML", "CSS", "JavaScript", "NodeJs", "ExpressJs", "MongoDB"]}
                 />
 
                 <ProjectCard 
@@ -35,7 +51,7 @@ export default function Project() {
                     codeLink="https://github.com/rishabhchaudhary0210/Grocery-Website"
                     head="GROCO-Grocery Store"
                     text="A website to fulfill your daily grocery needs. "
-                    skills={["HTML", "CSS", "JS", "SwiperJs"]}
+                    skills={["HTML", "CSS", "JavaScript", "SwiperJs"]}
                 />
                 <ProjectCard 
                     image="https://img.freepik.com/free-vector/people-analyzing-growth-charts_23-2148866843.jpg?w=740&t=st=1687604447~exp=1687605047~hmac=5024c2419663ca5df620320ffaa2c732fa678a4c3d78dda0f4bf11074860555d"
@@ -43,7 +59,7 @@ export default function Project() {
                     codeLink="https://github.com/rishabhchaudhary0210/Admin-Dashboard"
                     head="Admin DashBoard"
                     text="A fully responsive and modern dashboard design to help you keep full track of your business analytics."
-                    skills={["HTML", "CSS", "JS"]}
+                    skills={["HTML", "CSS", "JavaScript"]}
                 />
                 <ProjectCard 
                     image="https://img.freepik.com/free-vector/businessman-holding-pencil-big-complete-checklist-with-tick-marks_1150-35019.jpg?w=740&t=st=1687606077~exp=1687606677~hmac=f5a51e52bf6d13c57420ab49775b4d8d89c6f6b38d682c6f8c6f5b90405c1b54"
@@ -51,7 +67,7 @@ export default function Project() {
                     codeLink="https://github.com/rishabhchaudhary0210/to-do-list"
                     head="To-Do-List"
                     text="A basic to-do-list webApp with database connectivity to help you track your daily tasks."
-                    skills={["HTML", "CSS", "JS", "NodeJs", "ExpressJs", "MongoDB"]}
+                    skills={["HTML", "CSS", "JavaScript", "NodeJs", "ExpressJs", "MongoDB"]}
                 />
                 <ProjectCard 
                     image="https://img.freepik.com/free-vector/yellow-lined-notepaper-journal-sticker-vector_53876-168271.jpg?w=740&t=st=1687606313~exp=1687606913~hmac=e4b12528dcf51c91f11d49a410919b2729786af31c669d20d075aed1323ea91e"
@@ -59,10 +75,5 @@ export default function Project() {
                     codeLink="https://github.com/rishabhchaudhary0210https://github.com/rishabhchaudhary0210/NoteKeeper"
                     head="NoteKeeper"
                     text="A react based note making app so that you don't have to be scared of forgetting your imprompt ideas."
-                    skills={["ReactJS","HTML","CSS","JS"]}
-                />
-               
-            </div>
-        </div>
-    );
-}
+                    skills={["ReactJS","HTML","CSS","JavaScript"]}
+                /> */}
