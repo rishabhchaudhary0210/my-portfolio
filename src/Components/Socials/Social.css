@@ -1,0 +1,36 @@
+
+.socialButton{
+}
+
+.iconLinks{
+    position: fixed;
+    left: 20px;
+    bottom: 50px;
+    height: 70px;
+    width: 70px;
+    font-size: 1.5rem;
+    color: var(--sec-clr);
+    cursor: pointer;
+    border-radius: 50%;
+    outline: 4px solid var(--sec-clr);
+    outline-offset: -7px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+
+.iconLinks.envelope{
+    bottom: 130px;
+}
+.iconLinks.github{
+    left: 100px;
+    bottom: 100px;
+}
+.iconLinks.linkedin{
+    bottom: 15px;
+    left: 95px;
+}
+

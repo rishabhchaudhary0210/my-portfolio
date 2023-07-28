@@ -8,14 +8,23 @@
     align-items:center;
     justify-content: center;
     /* background-color: rgb(26, 26, 26); */
-    background:transparent;
+    /* background:transparent; */
+    background: rgba(0, 0, 0, 0.511);
     backdrop-filter: blur(7px);
     padding: 0 45px;
     box-shadow: 1px 8px 10px rgb(58, 58, 58);
     z-index: 10;
     border-bottom: 3px solid var(--sec-clr);
 }
-
+.navbar>span{
+    /* background-color: rgba(175, 175, 175, 0.171); */
+    background: transparent;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    padding: 0.5% 1%;
+    border-radius: 30px;
+}
 .navbar a img{
     position: absolute;
     top: 8px;
@@ -26,6 +35,22 @@
 }
 .navbar a img:hover{
     filter: drop-shadow(3px 2px 1px var(--sec-clr));
+}
+.logo{
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    text-decoration: none;
+    background: linear-gradient(to right, silver 0, white 10%, grey 20%);
+    background-clip: text;
+    background-position: 0; 
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+    color: white;
+}
+
+@keyframes shine {
+    0%{background-position: 0;}
+    100%{background-position: 250px;}
 }
 .navList{
     display: flex;
@@ -93,7 +118,12 @@
     width: 10px;
 }
 
-@media only screen and (max-width:700px){
+@media only screen and (max-width:850px){
+    .navbar>span{
+        top: 30px;
+    }
+}
+@media only screen and (max-width:740px){
     .navList{
         transition: all 0.3s ease-out;
         display: none;
@@ -102,6 +132,9 @@
         position: absolute;
         top: 10px;
         left: 30px;
+    }
+    .logo{
+        top: 35px;
     }
     .navbar.active{
         transition: all 0.2s ease-out;

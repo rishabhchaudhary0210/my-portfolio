@@ -8,7 +8,6 @@
     background-clip: border-box;
 }
 .sub-home{
-    /* padding:0 27vw; */
     margin: 0 auto;
     padding: 0 10px;
     padding-top: 130px;
@@ -33,9 +32,7 @@
     padding: 10px 20px;
     text-align: left;
 }
-.name-box>div{
-    /* margin-left: px; */
-}
+
 .name-box .hello{
     font-size: 2.8rem;
     width: 100px;
@@ -47,7 +44,7 @@
     height: 150px;
     width: 280px;
     color: rgb(41, 41, 41);
-    margin-top: 10px;
+    /* margin-top: 10px; */
     align-self: flex-end;
     overflow: hidden;
 }
@@ -56,7 +53,7 @@
 }
 .info-box{
     width: 100%;
-    margin: 15px auto;
+    margin: 10px auto;
     color: grey;
     padding: 25px 20px;
     grid-area: info;
@@ -74,12 +71,41 @@
     justify-content: center;
     align-items: center;
     align-self: center;
-    margin: 10px 0;
+    margin: 5px 0;
     margin-bottom: 40px;
+    position: relative;
+    z-index: 10;
 }
-.download:hover{
-    filter: brightness(0.9);
+.download::before{
+    content: '';
+    height: 59px;
+    width: 0px;
+    border-radius: 10px;
+    background-color: var(--sec-clr);
+    filter: brightness(0.8);
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s ;
 }
+.download::after{
+    content: '';
+    height: 59px;
+    width: 0px;
+    border-radius: 10px;
+    background-color: var(--sec-clr);
+    filter: brightness(0.8);
+    position: absolute;
+    top:0;
+    right: 0;
+    z-index: -1;
+    transition: all 0.3s ;
+}
+.download:hover::before, .download:hover::after{
+    width: 130px;
+}
+
 .download:active{
     background-color: white;
     color: var(--sec-clr);
@@ -111,6 +137,9 @@
 @media only screen and (max-width:630px){
     .sub-home{
         max-width: 510px;
+    }
+    .title-box{
+        margin-top: 10px;
     }
 }
 

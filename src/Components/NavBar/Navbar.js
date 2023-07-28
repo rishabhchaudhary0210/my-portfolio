@@ -8,9 +8,12 @@ export default function Navbar() {
     }
     return (
         <div className={active ? "navbar active" : "navbar" }>
-            <a href="#home" class="logo">
-                <img src={logo} alt="Icon" />
-            </a>
+            <span>
+                <a href="#home" class="logo">
+                {/* <img src={logo} alt="Icon" /> */}
+                    RISHABH
+                </a>
+            </span>    
             <ul className={active ? "navList active" : "navList"}>
                 <a href="#home" className='navLinks' onClick={toggleActive}>
                     <li className="navItems">HOME</li>

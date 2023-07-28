@@ -18,7 +18,7 @@ export default function Project() {
             <div className={`heading reveal-left ${projectVisible ? "animate" : ""}`}>
                 <span>P</span>ROJECTS
             </div>
-            <div className={`project-cont reveal-right ${projectVisible ? "animate" : ""}`}>
+            <div className={`project-cont reveal-bottom ${projectVisible ? "animate" : ""}`}>
                {
                 projectData.map(element => 
                     <ProjectCard

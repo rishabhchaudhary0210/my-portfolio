@@ -4,6 +4,7 @@ import { useEffect, useRef , useState} from 'react';
 export default function Home() {
     const [homeVisible, setHomeVisible] = useState();
     const homeRef = useRef();
+    const btnRef = useRef();
     useEffect(()=>{
         const observer = new IntersectionObserver((entries)=>{
             const entry = entries[0];
@@ -11,6 +12,24 @@ export default function Home() {
         })
         observer.observe(homeRef.current);
     })
+    const handleMouseMove = (e)=>{
+        let x = e.offsetX;
+        let y = e.offsetY;
+        let btnHeight = btnRef.current.clientHeight;
+        let btnWidth = btnRef.current.clientWidth;
+
+        let moveX = x - btnWidth/2;
+        let moveY = y - btnHeight/2;
+
+        
+        
+        btnRef.current.style.transform = `translateX(${moveX}) translateY(${moveY})`;
+        
+    }
+    const handleMouseOut = ()=>{
+        btnRef.current.style.transform = `translateX(0) translateY(0)`;
+    }
+
     return (
         <div ref={homeRef} className="home" id='home'>
             <div className="sub-home =">
@@ -39,7 +58,7 @@ export default function Home() {
                 <div className={`info-box box reveal-bottom ${homeVisible ? "animate" : ""}`}>
                     I'm currently pursuing my B.Tech. in Computer Science Engineering where I have gained extensive knowledge about computers and programming. I am a hardworking and dedicated individual with a passion for technology. With a fairly strong hold of logical and problem solving skills I push harder to get better every day.
                 </div>
-                <a href="https://drive.google.com/file/d/1lEvZ0-izYGpnH4V51XmhLNzMDbVTF2a2/view?usp=drivesdk" target='_blank' rel="noreferrer" download className={`download reveal-bottom ${homeVisible ? "animate" : ""}`}>
+                <a ref={btnRef} href="https://drive.google.com/file/d/1lEvZ0-izYGpnH4V51XmhLNzMDbVTF2a2/view?usp=drivesdk" target='_blank' rel="noreferrer" download className={`download reveal-bottom ${homeVisible ? "animate" : ""}`} onMouseMove={handleMouseMove} onMouseOut={handleMouseOut}>
                     <span class="material-symbols-outlined">download</span>
                     Download Resume
                 </a>

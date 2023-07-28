@@ -4,7 +4,8 @@ import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import Project from './Components/Project/Project';
 import Contact from './Components/Contact/Contact';
-import Footer from './Components/Footer/Footer';
+// import Footer from './Components/Footer/Footer';
+import Social from './Components/Socials/Social';
 
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       <About />
       <Project />
       <Contact />
-      <Footer/>
+      {/* <Footer/> */}
+      <Social/>
     </div>
   );
 }
