@@ -1,14 +1,15 @@
 
 .socialButton{
+    z-index: 10;
 }
 
 .iconLinks{
     position: fixed;
     left: 20px;
-    bottom: 50px;
+    bottom: 20px;
     height: 70px;
     width: 70px;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: var(--sec-clr);
     cursor: pointer;
     border-radius: 50%;
@@ -22,15 +23,21 @@
     text-decoration: none;
 }
 
+.icons-box a{
+    z-index: 5;
+    height: 65px;
+    width: 65px;
+}
 .iconLinks.envelope{
-    bottom: 130px;
+    bottom: 100px;
+    left: 15px;
 }
 .iconLinks.github{
-    left: 100px;
-    bottom: 100px;
+    left: 90px;
+    bottom: 85px;
 }
 .iconLinks.linkedin{
-    bottom: 15px;
-    left: 95px;
+    bottom: 10px;
+    left: 100px;
 }
 

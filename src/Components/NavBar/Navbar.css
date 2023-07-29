@@ -13,7 +13,7 @@
     backdrop-filter: blur(7px);
     padding: 0 45px;
     box-shadow: 1px 8px 10px rgb(58, 58, 58);
-    z-index: 10;
+    z-index: 20;
     border-bottom: 3px solid var(--sec-clr);
 }
 .navbar>span{
@@ -134,7 +134,10 @@
         left: 30px;
     }
     .logo{
-        top: 35px;
+        font-size: 1.8rem;
+    }
+    .navbar>span{
+        top: 25px;
     }
     .navbar.active{
         transition: all 0.2s ease-out;

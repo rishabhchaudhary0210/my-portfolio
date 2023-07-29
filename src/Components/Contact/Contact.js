@@ -30,7 +30,10 @@ export default function Contact() {
     return (
         <div ref={contactRef} className="contact" id="contact">
             <div className={`heading reveal-bottom ${contactVisible ? "animate" : ""}`}>
-                CONTACT <span>ME</span>
+                CONTACT ME <span>HERE</span>
+            </div>
+            <div className={`contact-info reveal-bottom ${contactVisible ? "animate" : ""}`}>
+                Get in touch with me by filling this form or ping me on my socials, I will get back to you a soon as possible.
             </div>
             <div className={`contact-box reveal-bottom ${contactVisible ? "animate" : ""}`}>
                 <form action="" onSubmit={onSubmitForm} className='contact-form'>

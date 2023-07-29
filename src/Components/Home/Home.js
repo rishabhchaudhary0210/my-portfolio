@@ -32,6 +32,13 @@ export default function Home() {
 
     return (
         <div ref={homeRef} className="home" id='home'>
+            <div className="bg-cont">
+                <div className="blob-wrapper">
+                    <div className="blob-1"></div>
+                    <div className="blob-2"></div>
+                    <div className="bg-overlap"></div>
+                </div>
+            </div>
             <div className="sub-home">
                 <div className={`name-box box reveal-left ${homeVisible ? "animate" : ""}`}>
                     <span className='hello'>👋</span>
