@@ -2,7 +2,7 @@
 const projectData = [
     {
         image: "https://img.freepik.com/free-vector/blogging-fun-content-creation-online-streaming-video-blog-young-girl-making-selfie-social-network-sharing-feedback-self-promotion-strategy-vector-isolated-concept-metaphor-illustration_335657-855.jpg?w=740&t=st=1687537556~exp=1687538156~hmac=53ab2f572a80f79677c178dfe4b105a497364ff4350569ce0042d0c83d426ea2",
-        viewLink: "https://the-daily-journal-blogs.vercel.app/",
+        viewLink: "https://the-daily-journal-blog.vercel.app/",
         codeLink: "https://github.com/rishabhchaudhary0210/The-Daily-Journal",
         head: "The Daily Journal",
         text: "A fullstack blogging App to journal your experiences and life stories and help you share your ideas.",
