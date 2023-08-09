@@ -28,16 +28,19 @@
     height: 65px;
     width: 65px;
 }
-.iconLinks.envelope{
+.iconLinks.twitter{
     bottom: 100px;
     left: 15px;
+    color:#26a7de;
 }
 .iconLinks.github{
     left: 90px;
     bottom: 85px;
+    color: black;
 }
 .iconLinks.linkedin{
     bottom: 10px;
     left: 100px;
+    color:  #0077b5;
 }
 

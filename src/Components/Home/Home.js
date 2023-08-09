@@ -11,7 +11,7 @@ export default function Home() {
             setHomeVisible(entry.isIntersecting);
         })
         observer.observe(homeRef.current);
-    })
+    },[]);
     const handleMouseMove = (e)=>{
         let x = e.offsetX;
         let y = e.offsetY;

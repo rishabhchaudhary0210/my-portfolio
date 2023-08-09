@@ -12,7 +12,7 @@ export default function About() {
             setAboutVisible(entry.isIntersecting);
         })
         observer.observe(aboutRef.current);
-    });
+    },[]);
 
     return (
         <div ref={aboutRef} id="about" className="about" >
@@ -22,6 +22,7 @@ export default function About() {
             <div className={`about-cont reveal-left ${aboutVisible ? "animate" : ""}`}>
                 <div className="skill-head">
                     <h1><span>FRONTEND</span> DEVELOPER</h1>
+                    {/* <div className='skill-info'>Enhancing User Experience by making engaging and interactive designs and user interfaces.</div> */}
                 </div>
                 <div className="skill-cont">
 
@@ -76,13 +77,19 @@ export default function About() {
                     style={{ 'text-align': "right", }}
                 >
                     <h1><span>BACKEND</span> DEVELOPER</h1>
+                    {/* <div className="skill-info">
+                        Constructing robust and secure backend services to safeguard critical information.
+                    </div> */}
                 </div>
             </div>
 
             <div className={`about-cont reveal-left ${aboutVisible ? "animate" : ""}`}>
                 <div className="skill-head"
                     style={{ 'text-align': "left", }}>
-                    <h1><span>MORE</span> TECH</h1>
+                    <h1><span>MORE</span> LANGUAGES</h1>
+                    {/* <div className="skill-info">
+                        Multipurpose Languages to help develop softwares and build logic using data structures and algorithms.
+                    </div> */}
                 </div>
                 <div className="skill-cont">
 
@@ -91,6 +98,8 @@ export default function About() {
 
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt='C++' />
 
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" alt="Java"/>
+          
 
                 </div>
             </div>

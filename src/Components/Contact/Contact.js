@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import './Contact.css';
 import emailjs from 'emailjs-com';
 import { useRef, useEffect, useState } from 'react';
@@ -33,7 +34,17 @@ export default function Contact() {
                 CONTACT ME <span>HERE</span>
             </div>
             <div className={`contact-info reveal-bottom ${contactVisible ? "animate" : ""}`}>
-                Get in touch with me by filling this form or ping me on my socials, I will get back to you a soon as possible.
+                Get in touch with me by filling this form or message me on my socials, I will get back to you as soon as possible.
+            </div>
+            <div className={`contact-social reveal-bottom ${contactVisible ? "animate" : ""}`}>
+                <a href="https://wa.me/9810781435" target="_blank" className="whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+                    Send Message
+                </a>
+                <a href="rishabh.cs2809@gmail.com" target="_blank" className="email">
+                <i class="fa-solid fa-envelope"></i>
+                    Send E-mail
+                </a>
             </div>
             <div className={`contact-box reveal-bottom ${contactVisible ? "animate" : ""}`}>
                 <form action="" onSubmit={onSubmitForm} className='contact-form'>

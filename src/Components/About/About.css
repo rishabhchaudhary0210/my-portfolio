@@ -27,6 +27,7 @@
     border: 1px solid var(--sec-clr);
     border-radius: 10px;
     width:100%;
+    position: relative;
 }
 .about-cont:nth-child(2), .about-cont:nth-child(4){
     padding-left: 10px;
@@ -44,6 +45,9 @@
     font-weight: bolder;
     color: var(--sec-clr);
 }
+.skill-head .skill-info{
+    font-size: 1.2rem;
+}
 .skill-cont{
     background: rgba(48, 79, 253, 0.25);
     min-width: 485px;
@@ -55,6 +59,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
+    height: 100%;
 }
 .skill-cont img{
     height: 70px;
