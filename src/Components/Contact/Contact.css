@@ -54,7 +54,8 @@
 }
 .contact-form div input:focus + label, .contact-form div input:not(:placeholder-shown)~label,
 .contact-form div textarea:focus + label, .contact-form div textarea:not(:placeholder-shown)~label{
-    top: -12px;
+    top: -25px;
+    left: 0px;
 }
 
 /* .contact-form input::placeholder  */

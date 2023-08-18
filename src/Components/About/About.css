@@ -21,9 +21,14 @@
     color: var(--sec-clr);
 }
 .about-cont{
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+
     border: 1px solid var(--sec-clr);
     border-radius: 10px;
     width:100%;
@@ -40,6 +45,8 @@
     font-size: 2rem;
     margin: auto 20px;
     /* width: 50%; */
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .skill-head span{
     font-weight: bolder;
@@ -47,6 +54,8 @@
 }
 .skill-head .skill-info{
     font-size: 1.2rem;
+    margin: 5px 0;
+    padding: 2px 5px;
 }
 .skill-cont{
     background: rgba(48, 79, 253, 0.25);
@@ -108,9 +117,10 @@
         font-size: 3.4rem;
     }
     .about-cont{
+        display:flex;
         flex-direction: column;
         height: 100%;
-        padding-bottom: 30px;
+        padding: 10px;
     } 
     .about-cont:nth-child(3){
         flex-direction: column-reverse;

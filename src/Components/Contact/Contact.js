@@ -24,7 +24,9 @@ export default function Contact() {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             const entry = entries[0];
-            setContactVisible(entry.isIntersecting);
+            if(entry.isIntersecting){
+                setContactVisible(true);
+            }
         })
         observer.observe(contactRef.current);
     })

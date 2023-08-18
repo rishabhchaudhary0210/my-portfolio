@@ -9,7 +9,9 @@ export default function Project() {
     useEffect(()=>{
         const observer = new IntersectionObserver((entries)=>{
             const entry = entries[0];
-            setProjectVisible(entry.isIntersecting);
+            if(entry.isIntersecting === true){
+                setProjectVisible(true);
+            }
         })
         observer.observe(projectRef.current);
     })

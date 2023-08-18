@@ -9,7 +9,9 @@ export default function About() {
         const observer = new IntersectionObserver((entries)=>{
             const entry = entries[0];
             console.log(aboutVisible);
-            setAboutVisible(entry.isIntersecting);
+            if(entry.isIntersecting === true){
+                setAboutVisible(true);
+            }
         })
         observer.observe(aboutRef.current);
     },[]);
@@ -22,7 +24,7 @@ export default function About() {
             <div className={`about-cont reveal-left ${aboutVisible ? "animate" : ""}`}>
                 <div className="skill-head">
                     <h1><span>FRONTEND</span> DEVELOPER</h1>
-                    {/* <div className='skill-info'>Enhancing User Experience by making engaging and interactive designs and user interfaces.</div> */}
+                    <div className='skill-info'>Enhancing User Experience by making engaging and interactive designs and user interfaces.</div>
                 </div>
                 <div className="skill-cont">
 
@@ -77,9 +79,9 @@ export default function About() {
                     style={{ 'text-align': "right", }}
                 >
                     <h1><span>BACKEND</span> DEVELOPER</h1>
-                    {/* <div className="skill-info">
+                    <div className="skill-info">
                         Constructing robust and secure backend services to safeguard critical information.
-                    </div> */}
+                    </div>
                 </div>
             </div>
 
@@ -87,9 +89,9 @@ export default function About() {
                 <div className="skill-head"
                     style={{ 'text-align': "left", }}>
                     <h1><span>MORE</span> LANGUAGES</h1>
-                    {/* <div className="skill-info">
+                    <div className="skill-info">
                         Multipurpose Languages to help develop softwares and build logic using data structures and algorithms.
-                    </div> */}
+                    </div>
                 </div>
                 <div className="skill-cont">
 
