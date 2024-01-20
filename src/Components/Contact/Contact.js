@@ -43,7 +43,7 @@ export default function Contact() {
                 <i class="fa-brands fa-whatsapp"></i>
                     Send Message
                 </a>
-                <a href="rishabh.cs2809@gmail.com" target="_blank" className="email">
+                <a href="mailto:rishabh.cs2809@gmail.com" target="_blank" className="email">
                 <i class="fa-solid fa-envelope"></i>
                     Send E-mail
                 </a>

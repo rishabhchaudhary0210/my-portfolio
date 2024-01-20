@@ -1,12 +1,23 @@
 import './Social.css';
-import { useState } from 'react';
+import { useState, useRef, useEffect} from 'react';
 
 export default function Social() {
 
     const [socialActive, setSocialActive] = useState(false);
+    const socialRef = useRef(null);
+
+    useEffect(()=>{
+        const HandleClickOutside = (e)=>{
+            if(socialRef.current && !socialRef.current.contains(e.target)){
+                setSocialActive(false);
+            }
+        }
+        document.addEventListener('mousedown', HandleClickOutside);
+        return () => { document.removeEventListener('mousedown', HandleClickOutside); };
+    },[]);
 
     return (
-        <div className='social'>
+        <div className='social' ref={socialRef}>
             <div className="socialButton iconLinks" onClick={() => { setSocialActive(!socialActive) }}>
                 {!socialActive && <i class="fa-solid fa-user"></i>}
                 {socialActive && <i class="fa-solid fa-x"></i>}

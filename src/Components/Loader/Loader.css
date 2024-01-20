@@ -1,0 +1,20 @@
+.loader{
+    background-color: var(--bg-clr);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    transition: all 0.8s ease;
+    z-index: 100;
+}
+
+.loader .loader-text{
+    font-size: 3rem;
+    color: white;
+}
+
+.loader.remove{
+    transform:translateY(-100%);
+    visibility: hidden;
+}

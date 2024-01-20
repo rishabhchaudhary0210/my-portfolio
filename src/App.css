@@ -25,12 +25,26 @@
 
 body{
     background-color: var(--bg-clr);
+
 }
 
 #home, #about, #project, #contact{
     margin-bottom: 50px;
 }
-
+/* .app{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+}
+.app-container{
+    border:2px solid blue;
+    position: absolute;
+    top:100%;
+}
+.app-container.active{
+    transform: translateY(0);
+    top: 0;
+} */
 
 .reveal-left{
     transition: transform 2s ease, opacity 2s ease;
