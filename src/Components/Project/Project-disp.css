@@ -1,0 +1,88 @@
+
+.project-disp{
+    width: 100%;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+}
+
+.project-disp .img-cont{
+    height: 100%;
+    width: 500px;
+    flex-grow: 1;
+    border-radius: 15px;
+    /* overflow: hidden; */
+    position: relative;
+    box-shadow: 1px 2px 5px gray;
+}
+.project-disp .img-cont div {
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 55px;
+    cursor: pointer;
+}
+.project-disp .img-cont:hover div{
+    visibility: visible;
+}
+.project-disp .img-cont div span{
+    font-size: 3.5rem;
+    color: white;
+    overflow: hidden;
+}
+.project-disp .img-cont div svg{
+    height: 50px;
+    width: 50px;
+}
+.project-disp img{
+    height: 100%;
+    width: 100%;
+}
+.project-disp .project-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+.project-disp .project-info h2{
+    color: #eee;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: var(--sec-clr);
+}
+.project-disp .project-info p{
+    font-size: 1.2rem;
+    color:#fff;
+}
+.project-disp .project-info .project-skills{
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.project-disp .project-info .project-skills span{ 
+    background-color: #eeeeee;
+    color: darkslategray;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    height: 40px;
+    padding: 0 18px;
+    display: grid;
+    place-items: center;
+}

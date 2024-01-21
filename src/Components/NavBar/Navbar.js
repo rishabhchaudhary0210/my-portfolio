@@ -21,6 +21,9 @@ export default function Navbar() {
                 <a href="#about" className='navLinks' onClick={toggleActive}>
                     <li className="navItems">ABOUT</li>
                 </a>
+                {/* <a href="#skill" className='navLinks' onClick={toggleActive}>
+                    <li className="navItems">SKILLS</li>
+                </a> */}
                 <a href="#projects" className='navLinks' onClick={toggleActive}>
                     <li className="navItems">PROJECTS</li>
                 </a>
