@@ -8,6 +8,7 @@ export {default as simonGame} from './../../Assets/Project-photos/simon-game.jpg
 export {default as talentConnect} from './../../Assets/Project-photos/talent-connect.jpg';
 export {default as ticTacToe} from './../../Assets/Project-photos/tic-tac-toe.jpg';
 export {default as toDoList} from './../../Assets/Project-photos/to-do-list.jpg';
+export {default as travelPartner} from './../../Assets/Project-photos/travel-partner.jpg';
 
 export {default as laptopFrame} from './../../Assets/Project-photos/laptop-frame.png';
 export {default as mobileFrame} from './../../Assets/Project-photos/mobile-frame.png';

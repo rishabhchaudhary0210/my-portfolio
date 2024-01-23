@@ -227,6 +227,24 @@
     scroll-snap-type: x mandatory;
     /* overflow-y: hidden; */
 }
+.frame-wrapper .project-img-cont .arrow{
+    color: #eee;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    height: max-content;
+    width: max-content;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.41);
+    border-radius: 100%;
+    cursor: pointer;
+}
+.frame-wrapper .project-img-cont .arrow.left{
+    left: 0;
+}
+.frame-wrapper .project-img-cont .arrow.right{
+    right: 0;
+}
 .frame-wrapper .project-img-cont div{
     height: 100%;
     width: 100%;
@@ -247,4 +265,10 @@
     flex-shrink: 0;
     height: 100%;
     width: 100%;
+}
+
+@media screen and (max-width:1050px) {
+    .frame-wrapper{
+        width:120%;
+    }
 }
