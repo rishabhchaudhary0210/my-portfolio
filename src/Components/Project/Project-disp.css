@@ -1,23 +1,25 @@
 
 .project-disp{
+    /* height: 300px; */
     width: 100%;
     margin: 20px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 45px;
+    position: relative;
 }
 
-.project-disp .img-cont{
-    height: 100%;
-    width: 500px;
+.project-disp .img-cont, .project-disp .project-info .img-cont-mobile{
+    height: 300px;
+    width: 400px;
     flex-grow: 1;
     border-radius: 15px;
-    /* overflow: hidden; */
+    overflow: hidden;
     position: relative;
-    box-shadow: 1px 2px 5px gray;
+    box-shadow: 1px 2px 5px black;
 }
-.project-disp .img-cont div {
+.project-disp .img-cont div, .project-disp .project-info .img-cont-mobile div {
     background-color: rgba(0, 0, 0, 0.5);
     visibility: hidden;
     position: absolute;
@@ -32,15 +34,15 @@
     gap: 55px;
     cursor: pointer;
 }
-.project-disp .img-cont:hover div{
+.project-disp .img-cont:hover div, .project-disp .project-info .img-cont-mobile:hover div{
     visibility: visible;
 }
-.project-disp .img-cont div span{
+.project-disp .img-cont div span, .project-disp .project-info .img-cont-mobile div span{
     font-size: 3.5rem;
     color: white;
     overflow: hidden;
 }
-.project-disp .img-cont div svg{
+.project-disp .img-cont div svg, .project-disp .project-info .img-cont-mobile div svg{
     height: 50px;
     width: 50px;
 }
@@ -54,6 +56,9 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 25px;
+}
+.project-disp .project-info .img-cont-mobile{
+    display: none;
 }
 .project-disp .project-info h2{
     color: #eee;
@@ -78,11 +83,48 @@
 .project-disp .project-info .project-skills span{ 
     background-color: #eeeeee;
     color: darkslategray;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     font-weight: bold;
     border-radius: 10px;
-    height: 40px;
-    padding: 0 18px;
+    height: 30px;
+    padding: 0 10px;
     display: grid;
     place-items: center;
+}
+
+@media screen and (max-width:800px) {
+    .project-disp{
+        gap : 20px;
+    }
+    .project-disp .img-cont{
+        height: 250px;
+        width: 300px;
+    }
+    .project-disp .project-info{
+        width: 70%;
+    }
+    /* .project-disp .img-cont{
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        top: 0;
+        right: 0;
+    } */
+}
+
+@media screen and (max-width:700px) {
+    .project-disp{
+        flex-direction: column;
+    }
+    .project-disp .img-cont{
+        display: none;
+    }
+    .project-disp .project-info{
+        width: 100%;
+    }
+    .project-disp .project-info .img-cont-mobile{
+        display: block;
+        height: 100%;
+        width: 80%;
+    }
 }

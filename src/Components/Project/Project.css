@@ -165,7 +165,7 @@
 
 @media screen and (max-width:1200px) {
     .project {
-        padding: 50px 10vw;
+        padding: 50px 5vw;
     }
 
     .project-cont {
@@ -184,6 +184,7 @@
     }
 
 }
+
 @media screen and (max-width:700px) {
     .project-cont {
         grid-template-columns: 1fr;

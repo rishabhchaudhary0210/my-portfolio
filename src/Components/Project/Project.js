@@ -17,7 +17,7 @@ export default function Project() {
 
     const nextIndex = () => {
         slideRef.current.scroll(index * boundingWidth, 0);
-        
+
         console.log("next index =  " + index);
         // var trans = `transformX(${index*(100)}%)`;
         // console.log(trans);
@@ -25,7 +25,7 @@ export default function Project() {
         setIndex(index + 1 === photoArray.length ? 0 : index + 1);
     }
     const prevIndex = () => {
-        slideRef.current.scroll(-1*index * boundingWidth, 0);
+        slideRef.current.scroll(-1 * index * boundingWidth, 0);
         console.log("prev index =  " + index);
         setIndex(index - 1 < 0 ? photoArray.length - 1 : index - 1);
     }
@@ -55,24 +55,7 @@ export default function Project() {
             <div className={`heading reveal-left ${projectVisible ? "animate" : ""}`}>
                 Each <span>project</span> is a unique piece of developement.
             </div>
-            <div className={`project-cont reveal-bottom ${projectVisible ? "animate" : ""}`}>
-                {
-                    projectData.map(element =>
-                        <ProjectCard
-                            image={element.image}
-                            viewLink={element.viewLink}
-                            codeLink={element.codeLink}
-                            head={element.head}
-                            text={element.text}
-                            skills={element.skills}
-                        />
-                    )
-                }
-            </div>
-            {/* <div>
-                <Projectdisp />
-            </div> */}
-            <div className='frame-wrapper'>
+            <div className={`frame-wrapper reveal-bottom ${projectVisible ? "animate" : ""}`}>
                 <img src={laptopFrame} alt="frame" id="laptop-frame" />
                 <div className="project-img-cont">
                     <IconLeftArrow onClick={prevIndex} className="arrow left" />
@@ -87,6 +70,40 @@ export default function Project() {
                     </div>
                 </div>
             </div>
+            {/* <div className={`project-cont reveal-bottom ${projectVisible ? "animate" : ""}`}>
+                {
+                    projectData.map(element =>
+                        <ProjectCard
+                            image={element.image}
+                            viewLink={element.viewLink}
+                            codeLink={element.codeLink}
+                            head={element.head}
+                            text={element.text}
+                            skills={element.skills}
+                        />
+                        // <ProjectCard
+                        //     image={element.image}
+                        //     viewLink={element.viewLink}
+                        //     codeLink={element.codeLink}
+                        //     head={element.head}
+                        //     text={element.text}
+                        //     skills={element.skills}
+                        // />
+                    )
+                }
+            </div> */}
+            <div className={`reveal-bottom ${projectVisible ? "animate" : ""}`}>
+                {projectData.map(element =>
+                    <Projectdisp
+                        image={element.image}
+                        viewLink={element.viewLink}
+                        codeLink={element.codeLink}
+                        head={element.head}
+                        text={element.text}
+                        skills={element.skills}
+                    />)}
+            </div>
+            
         </div>
     );
 }
