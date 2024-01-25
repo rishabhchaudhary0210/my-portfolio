@@ -81,14 +81,6 @@ export default function Project() {
                             text={element.text}
                             skills={element.skills}
                         />
-                        // <ProjectCard
-                        //     image={element.image}
-                        //     viewLink={element.viewLink}
-                        //     codeLink={element.codeLink}
-                        //     head={element.head}
-                        //     text={element.text}
-                        //     skills={element.skills}
-                        // />
                     )
                 }
             </div> */}
@@ -103,7 +95,11 @@ export default function Project() {
                         skills={element.skills}
                     />)}
             </div>
-            
+            <div className='more-project-link'>
+                    <a href="/work">
+                        View more projects <IconRightArrow/>
+                    </a>
+            </div>
         </div>
     );
 }

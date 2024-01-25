@@ -21,7 +21,7 @@ const ProjectAll = () => {
   return (
     <div ref={projectRef} className='project' id='projects'>
         <Navbar />
-        <div className={`heading reveal-left ${projectVisible ? "animate" : ""}`}>
+        <div className={`heading project-all reveal-left ${projectVisible ? "animate" : ""}`} >
                <span>PRO</span>JECTS
             </div>
          <div className={`reveal-bottom ${projectVisible ? "animate" : ""}`}>
