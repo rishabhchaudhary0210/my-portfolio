@@ -93,8 +93,8 @@ export default function Project() {
                 }
             </div> */}
             <div className={`reveal-bottom ${projectVisible ? "animate" : ""}`}>
-                {projectData.map(element =>
-                    <Projectdisp
+                {projectData.map((element,index) =>
+                    index<3 && <Projectdisp
                         image={element.image}
                         viewLink={element.viewLink}
                         codeLink={element.codeLink}
