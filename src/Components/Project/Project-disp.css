@@ -105,6 +105,26 @@
     place-items: center;
 }
 
+.project-disp .project-info .link-container {
+    display: flex;
+    gap: 15px;
+}
+.project-disp .project-info .link-container .link {
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    color: #fff;
+    padding: 3px 18px;
+}
+.project-disp .project-info .link-container .link.preview {
+    background-color: var(--sec-clr);
+
+}
+.project-disp .project-info .link-container .link.code {
+    border: 2px solid var(--sec-clr);
+}
 /* @media screen and (max-width:900px) {
     .project-disp{
         gap : 20px;
