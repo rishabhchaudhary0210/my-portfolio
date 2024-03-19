@@ -50,7 +50,7 @@ export default function Home() {
                 <div className={`info-box box reveal-bottom ${homeVisible ? "animate" : ""}`}>
                     I'm currently pursuing my B.Tech. in Computer Science Engineering where I have gained extensive knowledge about computers and programming. I am a hardworking and dedicated individual with a passion for technology. With a fairly strong hold of logical and problem solving skills, I push harder to get better every day.
                 </div>
-                <a href="https://docs.google.com/document/d/1IaqRnOg3AUf7tqyN8_rJcWy8euhPl4a8dLoAXt6uX_w/edit?usp=sharing" target='_blank' rel="noreferrer" download className={`download reveal-bottom ${homeVisible ? "animate" : ""}`}>
+                <a href="https://drive.google.com/file/d/1nSX-OoMbHO5f4e2RQem_Ro2_GJQT2CQv/view?usp=sharing" target='_blank' rel="noreferrer" download className={`download reveal-bottom ${homeVisible ? "animate" : ""}`}>
                     <span class="material-symbols-outlined">download</span>
                     Download Resume
                 </a>

@@ -157,6 +157,7 @@
     right: 0;
     bottom: -2px;
     backdrop-filter: blur(180px);
+    -webkit-backdrop-filter: blur(180px);
     filter: brightness(0.8);
 }
 .blob-1,

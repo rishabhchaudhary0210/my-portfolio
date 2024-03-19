@@ -1,4 +1,4 @@
-import { dailyJournal, groco, adminDash, talentConnect, toDoList, travelPartner, marvelPedia, foodSite, drumKit, simonGame, ticTacToe } from "../../Assets/Project-photos/Photo";
+import { dailyJournal, groco, adminDash, talentConnect, toDoList, travelPartner, marvelPedia, foodSite, drumKit, simonGame, ticTacToe, discordClone, imageLibrary, weatherApp } from "../../Assets/Project-photos/Photo";
 
 const projectData = [
     {
@@ -11,6 +11,14 @@ const projectData = [
         skills: ["ReactJs", "JavaScript", "NodeJs", "Amadeus API", "ExpressJS", "MongoDB", "JWT"]
     },
     {
+        image: discordClone,
+        viewLink: "https://discord-clone-i6xx.onrender.com/",
+        codeLink: "https://github.com/rishabhchaudhary0210/discord-clone",
+        head: "Discord Clone",
+        text: "Created a Discord clone using Next.js, TypeScript, Clerk Auth, Socket.io, LiveKit, Tanstack Query and other technologies, offering a fully functional chat application. Implemented features like real-time messaging, user authentication, and chat rooms, providing a seamless communication platform.",
+        skills: ["NextJs", "TypeScript", "ClerkAuth", "SocketIO", "LiveKit", "Prisma", "Supabase", "Tanstack Query", "Zustand"]
+    },
+    {
         // image: "https://img.freepik.com/free-vector/blogging-fun-content-creation-online-streaming-video-blog-young-girl-making-selfie-social-network-sharing-feedback-self-promotion-strategy-vector-isolated-concept-metaphor-illustration_335657-855.jpg?w=740&t=st=1687537556~exp=1687538156~hmac=53ab2f572a80f79677c178dfe4b105a497364ff4350569ce0042d0c83d426ea2",
         image: dailyJournal,
         viewLink: "https://the-daily-journal-blog.vercel.app/",
@@ -19,6 +27,14 @@ const projectData = [
         // text: "A fullstack blogging App to journal your experiences and life stories and help you share your ideas.",
         text: "The Daily Journal is a dynamic, full-stack personal blog website. Developed using HTML, CSS, JavaScript, NodeJS, and MongoDB, it empowers users to create, share, and engage with blog content. The platform offers a seamless and interactive experience for both bloggers and readers.",
         skills: ["HTML", "CSS", "JavaScript", "EJS", "NodeJs", "ExpressJs", "MongoDB"]
+    },
+    {
+        image: imageLibrary,
+        viewLink: "https://image-library-tan.vercel.app/",
+        codeLink: "https://github.com/rishabhchaudhary0210/rishabh-dobby",
+        head: "The Image Library",
+        text: "Developed a full-stack web application using React.js and Node.js, enabling users to upload, store, and search images along with authentication and authorization for secured access. Integrated Cloudinary for image storage and MongoDB for user data, enhancing user experience and accessibility.",
+        skills: ["ReactJS", "JavaScript", "TailWind", "Cloudinary", "NodeJS", "ExpressJS", "Multer", "MongoDB", "JWT"],
     },
 
     {
@@ -59,6 +75,14 @@ const projectData = [
         // text:"The FrontEnd design for an online recruitment solution. The webpage is designed to provide users a complete insight to using their services.",
         text: "Talent Connect is a website designed for an HR agency. Focused on talent recruitment, the platform explores and identifies the best candidates for various roles, presenting a well-designed and content-rich interface for talent acquisition.",
         skills: ["HTML", "CSS", "JavaScript"],
+    },
+    {
+        image: weatherApp,
+        viewLink: "https://weatherist-lemon.vercel.app/",
+        codeLink: "https://github.com/rishabhchaudhary0210/Weatherist",
+        head: "Weatherist",
+        text: "Designed and developed a weather application using React.js, providing users with real-time weather updates. Integrated with a weather API to fetch and display accurate weather information, enhancing user experience and convenience.",
+        skills: ["ReactJS", "JavaScript", "WeatherAPI", "ChartJS"],
     },
     {
         // image: "https://img.freepik.com/free-vector/businessman-holding-pencil-big-complete-checklist-with-tick-marks_1150-35019.jpg?w=740&t=st=1687606077~exp=1687606677~hmac=f5a51e52bf6d13c57420ab49775b4d8d89c6f6b38d682c6f8c6f5b90405c1b54",

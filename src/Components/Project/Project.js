@@ -1,9 +1,9 @@
 import './Project.css';
-import ProjectCard from './Project-card';
 import projectData from './Project-data';
 import Projectdisp from './Project-disp';
 import { useRef, useEffect, useState } from 'react';
 import { dailyJournal, marvelPedia, adminDash, groco, laptopFrame, travelPartner } from './../../Assets/Project-photos/Photo';
+import ProjectCard from './Project-card';
 
 export default function Project() {
     const [projectVisible, setProjectVisible] = useState();
@@ -44,14 +44,15 @@ export default function Project() {
         if (slideRef.current) {
             setBoundingWidth(slideRef.current.offsetWidth);
         }
-        document.addEventListener('wheel', (e) => {
-            console.log("wheel moveed", e)
-        })
+        // document.addEventListener('wheel', (e) => {
+            
+        // })
         const interval = setInterval(() => nextIndex(), 3000);
         return () => clearInterval(interval);
     })
     return (
         <div ref={projectRef} className='project' id='projects'>
+            {/* <ProjectCard></ProjectCard> */}
             <div className={`heading reveal-left ${projectVisible ? "animate" : ""}`}>
                 Each <span>project</span> is a unique piece of developement.
             </div>
@@ -70,20 +71,7 @@ export default function Project() {
                     </div>
                 </div>
             </div>
-            {/* <div className={`project-cont reveal-bottom ${projectVisible ? "animate" : ""}`}>
-                {
-                    projectData.map(element =>
-                        <ProjectCard
-                            image={element.image}
-                            viewLink={element.viewLink}
-                            codeLink={element.codeLink}
-                            head={element.head}
-                            text={element.text}
-                            skills={element.skills}
-                        />
-                    )
-                }
-            </div> */}
+            
             <div className={`reveal-bottom ${projectVisible ? "animate" : ""}`}>
                 {projectData.map((element,index) =>
                     index<3 && <Projectdisp

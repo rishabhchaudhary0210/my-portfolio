@@ -287,6 +287,7 @@
     scroll-snap-type: x mandatory;
     /* transform: translateX(-100px); */
     /* overflow-x: scroll; */
+    animation: fadeIn 1s;
 }
 .frame-wrapper .project-img-cont div::-webkit-scrollbar{
     display: none;
@@ -299,10 +300,38 @@
     flex-shrink: 0;
     height: 100%;
     width: 100%;
+    animation: fadeIn 2s;
 }
-
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
 @media screen and (max-width:1050px) {
     .frame-wrapper{
         width:120%;
     }
+}
+
+#project-card{
+    width: 100%;
+    border: 2px solid red;
+    /* height: 400px; */
+    display: flex;
+    flex-direction: row;
+}
+
+#project-card div{
+    height: 100%;
+    width: 100%;
+    background-color: darkblue;
+    border: 2px solid red;
+}
+#project-card #img{
+    object-fit: contain;
+    border: 2px solid yellow;
+}
+#project-card #img img{
+    height: 100%;
+    width: 100%;
 }

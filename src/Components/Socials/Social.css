@@ -10,12 +10,15 @@
     height: 55px;
     width: 55px;
     font-size: 1.7rem;
-    color: var(--sec-clr);
+    /* color: var(--sec-clr); */
+    /* color: rgb(74,74,255); */
+    color: #fff;
     cursor: pointer;
     border-radius: 50%;
     outline: 4px solid var(--sec-clr);
     outline-offset: -6px;
-    background-color: white;
+    /* background-color: white; */
+    background-color: rgb(22, 29, 39);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,21 +39,21 @@
     left: 0px; */
     bottom: 250px;
     left: 15px;
-    color:#26a7de;
+    /* color:#26a7de; */
 }
 .iconLinks.github{
     /* left: 53px;
     bottom: 95px; */
     left: 15px;
     bottom: 190px;
-    color: black;
+    /* color: black; */
 }
 .iconLinks.linkedin{
     /* bottom: 0px;
     left: 75px; */
     bottom: 130px;
     left: 15px;
-    color:  #0077b5;
+    /* color:  #0077b5; */
 }
 .iconLinks.leetcode{
     /* left: 95px;
