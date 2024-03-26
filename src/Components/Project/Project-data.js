@@ -8,7 +8,7 @@ const projectData = [
         head: "Travel Partner",
         text: " The Travel Partner Project is a sophisticated MERN stack web app integrated with the Amadeus API. Offering real-time flight search, user authentication, and authorization, it facilitates convenient travel planning. ",
         // The project also includes a unique "cheapest day" search feature, enhancing the overall user experience.,
-        skills: ["ReactJs", "JavaScript", "NodeJs", "Amadeus API", "ExpressJS", "MongoDB", "JWT"]
+        skills: ["ReactJs", "JavaScript", "NodeJs", "Amadeus API", "ExpressJS", "MongoDB", "JWT", "Razorpay"]
     },
     {
         image: discordClone,

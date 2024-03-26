@@ -7,8 +7,8 @@
     flex-direction: column;
     align-items: center;
     padding-top: 100px !important;
-    height: max-content;
-    overflow-y: auto;
+    /* min-height: 80vw; */
+    overflow-y: visible;
 }
 .contact-box{
     width: 100%;

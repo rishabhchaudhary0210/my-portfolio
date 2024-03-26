@@ -156,8 +156,8 @@
     left: 0;
     right: 0;
     bottom: -2px;
-    backdrop-filter: blur(180px);
-    -webkit-backdrop-filter: blur(180px);
+    backdrop-filter: blur(200px);
+    -webkit-backdrop-filter: blur(200px);
     filter: brightness(0.8);
 }
 .blob-1,
@@ -165,14 +165,14 @@
     position: absolute;
     height:60vh;
     width: 70vw;
-    /* filter: brightness(0.9); */
+    filter: brightness(0.8);
 }
 
 .blob-1 {
     background: linear-gradient(to right, violet, rgb(82, 123, 255));
     /* top: 0;
     left: 0; */
-    animation: move1 4s linear infinite;
+    animation: move1 6s linear infinite;
 }
 
 @keyframes move1 {
@@ -206,7 +206,7 @@
     background: linear-gradient(to right, red, hotpink);
     top: 0;
     right: 0;
-    animation: move2 5s linear infinite;
+    animation: move2 6s linear infinite;
 }
 
 @keyframes move2 {

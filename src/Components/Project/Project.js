@@ -3,7 +3,6 @@ import projectData from './Project-data';
 import Projectdisp from './Project-disp';
 import { useRef, useEffect, useState } from 'react';
 import { dailyJournal, marvelPedia, adminDash, groco, laptopFrame, travelPartner } from './../../Assets/Project-photos/Photo';
-import ProjectCard from './Project-card';
 
 export default function Project() {
     const [projectVisible, setProjectVisible] = useState();
@@ -18,7 +17,7 @@ export default function Project() {
     const nextIndex = () => {
         slideRef.current.scroll(index * boundingWidth, 0);
 
-        console.log("next index =  " + index);
+        // console.log("next index =  " + index);
         // var trans = `transformX(${index*(100)}%)`;
         // console.log(trans);
         // slideRef.current.style.transform = trans;
@@ -26,7 +25,7 @@ export default function Project() {
     }
     const prevIndex = () => {
         slideRef.current.scroll(-1 * index * boundingWidth, 0);
-        console.log("prev index =  " + index);
+        // console.log("prev index =  " + index);
         setIndex(index - 1 < 0 ? photoArray.length - 1 : index - 1);
     }
     useEffect(() => {
@@ -52,7 +51,6 @@ export default function Project() {
     })
     return (
         <div ref={projectRef} className='project' id='projects'>
-            {/* <ProjectCard></ProjectCard> */}
             <div className={`heading reveal-left ${projectVisible ? "animate" : ""}`}>
                 Each <span>project</span> is a unique piece of developement.
             </div>
