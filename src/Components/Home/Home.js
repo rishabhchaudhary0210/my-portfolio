@@ -1,19 +1,19 @@
 import './Home.css';
-import { useEffect, useRef , useState} from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
     const [homeVisible, setHomeVisible] = useState();
     const homeRef = useRef();
 
-    useEffect(()=>{
-        const observer = new IntersectionObserver((entries)=>{
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
             const entry = entries[0];
-            if(entry.isIntersecting === true){
+            if (entry.isIntersecting === true) {
                 setHomeVisible(true);
             }
         })
         observer.observe(homeRef.current);
-    },[]);
+    }, []);
 
     return (
         <div ref={homeRef} className="home" id='home'>
@@ -38,20 +38,20 @@ export default function Home() {
                 </div>
                 <div className={`title-box box reveal-right ${homeVisible ? "animate" : ""}`}>
                     <h3>
-                        Web Developer
+                        Software Developer
                     </h3>
                     <h3>
-                        Exploring Open Source
+                        Cloud & DevOps
                     </h3>
                     <h3>
-                        Upcoming Engineer
+                        Full Stack Engineer
                     </h3>
                 </div>
                 <div className={`info-box box reveal-bottom ${homeVisible ? "animate" : ""}`}>
-                    I'm currently pursuing my B.Tech. in Computer Science Engineering where I have gained extensive knowledge about computers and programming. I am a hardworking and dedicated individual with a passion for technology. With a fairly strong hold of logical and problem solving skills, I push harder to get better every day.
+                    Software Development Engineer with strong experience in full-stack development and cloud computing, having worked on production-grade public cloud platforms. Proven ability to own features end-to-end, modernize legacy systems, and contribute to scalable, user-focused software.
                 </div>
-                <a href="https://drive.google.com/file/d/1nSX-OoMbHO5f4e2RQem_Ro2_GJQT2CQv/view?usp=sharing" target='_blank' rel="noreferrer" download className={`download reveal-bottom ${homeVisible ? "animate" : ""}`}>
-                    <span class="material-symbols-outlined">download</span>
+                <a href="https://drive.google.com/file/d/16TO8NOgS9KT4Js9OhhIf0ugD9KZ2tUZy/view?usp=sharing" target='_blank' rel="noreferrer" download className={`download reveal-bottom ${homeVisible ? "animate" : ""}`}>
+                    <span className="material-symbols-outlined">download</span>
                     Download Resume
                 </a>
             </div>

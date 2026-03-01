@@ -22,14 +22,16 @@ export default function Contact() {
     const [contactVisible, setContactVisible] = useState();
     const contactRef = useRef();
     useEffect(() => {
+        const currentRef = contactRef.current;
         const observer = new IntersectionObserver((entries) => {
             const entry = entries[0];
-            if(entry.isIntersecting){
+            if (entry.isIntersecting) {
                 setContactVisible(true);
             }
         })
-        observer.observe(contactRef.current);
-    })
+        observer.observe(currentRef);
+        return () => observer.unobserve(currentRef);
+    }, [])
     return (
         <div ref={contactRef} className="contact" id="contact">
             <div className={`heading reveal-bottom ${contactVisible ? "animate" : ""}`}>
@@ -40,11 +42,11 @@ export default function Contact() {
             </div>
             <div className={`contact-social reveal-bottom ${contactVisible ? "animate" : ""}`}>
                 <a href="https://wa.me/9810781435" target="_blank" className="whatsapp">
-                <i class="fa-brands fa-whatsapp"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
                     Send Message
                 </a>
                 <a href="mailto:rishabh.cs2809@gmail.com" target="_blank" className="email">
-                <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-envelope"></i>
                     Send E-mail
                 </a>
             </div>

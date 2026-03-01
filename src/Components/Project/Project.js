@@ -1,54 +1,52 @@
 import './Project.css';
 import projectData from './Project-data';
 import Projectdisp from './Project-disp';
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, useCallback } from 'react';
 import { dailyJournal, marvelPedia, adminDash, groco, laptopFrame, travelPartner } from './../../Assets/Project-photos/Photo';
 
 export default function Project() {
     const [projectVisible, setProjectVisible] = useState();
     const [index, setIndex] = useState(0);
-    const [boundingWidth, setBoundingWidth] = useState(0);
 
     const photoArray = [dailyJournal, travelPartner, marvelPedia, adminDash, groco];
 
     const projectRef = useRef();
     const slideRef = useRef();
+    const indexRef = useRef(0);
 
-    const nextIndex = () => {
-        slideRef.current.scroll(index * boundingWidth, 0);
+    const nextIndex = useCallback(() => {
+        setIndex(prev => {
+            const next = prev + 1 === photoArray.length ? 0 : prev + 1;
+            indexRef.current = next;
+            return next;
+        });
+    }, [photoArray.length]);
 
-        // console.log("next index =  " + index);
-        // var trans = `transformX(${index*(100)}%)`;
-        // console.log(trans);
-        // slideRef.current.style.transform = trans;
-        setIndex(index + 1 === photoArray.length ? 0 : index + 1);
-    }
-    const prevIndex = () => {
-        slideRef.current.scroll(-1 * index * boundingWidth, 0);
-        // console.log("prev index =  " + index);
-        setIndex(index - 1 < 0 ? photoArray.length - 1 : index - 1);
-    }
+    const prevIndex = useCallback(() => {
+        setIndex(prev => {
+            const next = prev - 1 < 0 ? photoArray.length - 1 : prev - 1;
+            indexRef.current = next;
+            return next;
+        });
+    }, [photoArray.length]);
+
     useEffect(() => {
+        const currentRef = projectRef.current;
         const observer = new IntersectionObserver((entries) => {
             const entry = entries[0];
             if (entry.isIntersecting === true) {
                 setProjectVisible(true);
             }
-        })
-        observer.observe(projectRef.current);
+        });
+        observer.observe(currentRef);
 
-        // console.log("width = " + slideRef.current.style.width);
-        // console.log("width = " + slideRef.current.width);
-        // console.log(slideRef.current.offsetHeight + "  == " + slideRef.current.offsetWidth);
-        if (slideRef.current) {
-            setBoundingWidth(slideRef.current.offsetWidth);
-        }
-        // document.addEventListener('wheel', (e) => {
-            
-        // })
         const interval = setInterval(() => nextIndex(), 3000);
-        return () => clearInterval(interval);
-    })
+        return () => {
+            clearInterval(interval);
+            observer.unobserve(currentRef);
+        };
+    }, [nextIndex]);
+
     return (
         <div ref={projectRef} className='project' id='projects'>
             <div className={`heading reveal-left ${projectVisible ? "animate" : ""}`}>
@@ -61,18 +59,14 @@ export default function Project() {
                     <IconRightArrow onClick={nextIndex} className="arrow right" />
                     <div ref={slideRef}>
                         <img src={photoArray[index]} alt="img" />
-                        {/* {
-                            photoArray?.map((ele, index) =>
-                                <img src={ele} key={index} alt="img" />
-                            )
-                        } */}
                     </div>
                 </div>
             </div>
-            
+
             <div className={`reveal-bottom ${projectVisible ? "animate" : ""}`}>
-                {projectData.map((element,index) =>
-                    index<3 && <Projectdisp
+                {projectData.map((element, index) =>
+                    index < 3 && <Projectdisp
+                        key={element.head}
                         image={element.image}
                         viewLink={element.viewLink}
                         codeLink={element.codeLink}
@@ -82,9 +76,9 @@ export default function Project() {
                     />)}
             </div>
             <div className='more-project-link'>
-                    <a href="/work">
-                        View more projects <IconRightArrow/>
-                    </a>
+                <a href="/work">
+                    View more projects <IconRightArrow />
+                </a>
             </div>
         </div>
     );

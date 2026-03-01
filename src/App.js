@@ -1,10 +1,11 @@
 import './App.css';
-import { useEffect} from 'react';
+import { useEffect } from 'react';
 
 import Navbar from './Components/NavBar/Navbar';
 import Home from './Components/Home/Home';
 // import About from './Components/About/About';
 import Skill from './Components/Skills/Skill';
+import Experience from './Components/Experience/Experience';
 import Project from './Components/Project/Project';
 import Contact from './Components/Contact/Contact';
 import Social from './Components/Socials/Social';
@@ -13,10 +14,10 @@ import Loader from './Components/Loader/Loader';
 
 
 function App() {
-  useEffect(()=>{
-    window.scrollTo(0,0);
-    
-  },[]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+  }, []);
   return (
     <div className="app">
       <Loader />
@@ -25,6 +26,7 @@ function App() {
         <Home />
         {/* <About /> */}
         <Skill />
+        <Experience />
         <Project />
         <Contact />
         <Social />

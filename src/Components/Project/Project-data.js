@@ -1,6 +1,14 @@
-import { dailyJournal, groco, adminDash, talentConnect, toDoList, travelPartner, marvelPedia, foodSite, drumKit, simonGame, ticTacToe, discordClone, imageLibrary, weatherApp } from "../../Assets/Project-photos/Photo";
+import { dailyJournal, groco, adminDash, talentConnect, toDoList, travelPartner, marvelPedia, foodSite, drumKit, simonGame, ticTacToe, discordClone, imageLibrary, weatherApp, shipyard } from "../../Assets/Project-photos/Photo";
 
 const projectData = [
+    {
+        image: shipyard,
+        viewLink: "https://github.com/rishabhchaudhary0210/ShipYard",
+        codeLink: "https://github.com/rishabhchaudhary0210/ShipYard",
+        head: "ShipYard - PaaS",
+        text: "Designed and built a self-hosted, multi-tenant Platform-as-a-Service (PaaS) enabling automated deployments from GitHub via a fully containerized build and runtime pipeline. Features BullMQ-based async build orchestration, deterministic Docker builds, real-time log streaming via SSE, and secure shell access via WebSockets.",
+        skills: ["Node.js", "TypeScript", "Docker", "Redis", "BullMQ", "Prisma", "WebSockets"]
+    },
     {
         image: travelPartner,
         viewLink: "https://travelpartner.vercel.app/",
@@ -106,36 +114,36 @@ const projectData = [
         skills: ["ReactJS", "HTML", "CSS", "JavaScript"]
     },
     {
-        image:foodSite,
-        viewLink:"",
-        codeLink:"",
-        head:"Food-Site",
-        text:"The Food Site is a landing page designed for a food delivery business. It provides users with online ordering and bulk ordering options, creating an engaging platform for customers to explore and avail of food delivery services.",
-        skills:["HTML","CSS","JavaScript"],
+        image: foodSite,
+        viewLink: "",
+        codeLink: "",
+        head: "Food-Site",
+        text: "The Food Site is a landing page designed for a food delivery business. It provides users with online ordering and bulk ordering options, creating an engaging platform for customers to explore and avail of food delivery services.",
+        skills: ["HTML", "CSS", "JavaScript"],
     },
     {
-        image:drumKit,
-        viewLink:"",
-        codeLink:"",
-        head:"Drum Kit",
-        text:"The Drum Kit website offers an interactive experience, allowing users to play different components of a band's drum using mouse and keyboard clicks. It serves as an engaging platform for music enthusiasts to experiment with drum sounds",
-        skills:["HTML","CSS","JavaScript"],
+        image: drumKit,
+        viewLink: "",
+        codeLink: "",
+        head: "Drum Kit",
+        text: "The Drum Kit website offers an interactive experience, allowing users to play different components of a band's drum using mouse and keyboard clicks. It serves as an engaging platform for music enthusiasts to experiment with drum sounds",
+        skills: ["HTML", "CSS", "JavaScript"],
     },
     {
-        image:simonGame,
-        viewLink:"",
-        codeLink:"",
-        head:"Simon Game",
-        text:"The Simon Game is a memory game developed with JavaScript. Providing insights into JS functionality, the game challenges users to enhance their memory skills by replicating a sequence of colors and sounds.",
-        skills:["HTML","CSS","JavaScript"],
+        image: simonGame,
+        viewLink: "",
+        codeLink: "",
+        head: "Simon Game",
+        text: "The Simon Game is a memory game developed with JavaScript. Providing insights into JS functionality, the game challenges users to enhance their memory skills by replicating a sequence of colors and sounds.",
+        skills: ["HTML", "CSS", "JavaScript"],
     },
     {
-        image:ticTacToe,
-        viewLink:"",
-        codeLink:"",
-        head:"Tic-Tac-Toe",
-        text:"Tic Tac Toe is a classic game implemented for users to enjoy a strategic and competitive gaming experience. The project involves creating an interactive and user-friendly platform for playing the timeless game.",
-        skills:["HTML","CSS","JavaScript"],
+        image: ticTacToe,
+        viewLink: "",
+        codeLink: "",
+        head: "Tic-Tac-Toe",
+        text: "Tic Tac Toe is a classic game implemented for users to enjoy a strategic and competitive gaming experience. The project involves creating an interactive and user-friendly platform for playing the timeless game.",
+        skills: ["HTML", "CSS", "JavaScript"],
     },
     // {
     //     image:"",

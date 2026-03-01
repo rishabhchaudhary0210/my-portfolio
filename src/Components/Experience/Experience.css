@@ -1,0 +1,291 @@
+.experience {
+    background-color: var(--bg-clr);
+    width: 101vw;
+    padding: 50px 10vw;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-top: 100px !important;
+}
+
+/* Timeline */
+.timeline {
+    width: 100%;
+    position: relative;
+    padding-left: 40px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 18px;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--sec-clr), rgba(69, 69, 247, 0.2));
+    border-radius: 3px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -30px;
+    top: 24px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--sec-clr);
+    border: 3px solid var(--bg-clr);
+    box-shadow: 0 0 12px rgba(69, 69, 247, 0.6);
+    z-index: 2;
+}
+
+.timeline-item:first-child .timeline-dot {
+    width: 20px;
+    height: 20px;
+    left: -32px;
+    top: 22px;
+    box-shadow: 0 0 20px rgba(69, 69, 247, 0.8), 0 0 40px rgba(69, 69, 247, 0.3);
+    animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(69, 69, 247, 0.8), 0 0 40px rgba(69, 69, 247, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba(69, 69, 247, 1), 0 0 60px rgba(69, 69, 247, 0.5);
+    }
+}
+
+.timeline-content {
+    background: rgba(48, 79, 253, 0.08);
+    border: 1px solid rgba(69, 69, 247, 0.3);
+    border-radius: 12px;
+    padding: 28px 30px;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    border-color: var(--sec-clr);
+    box-shadow: 0 4px 25px rgba(69, 69, 247, 0.15);
+    transform: translateX(8px);
+}
+
+/* Experience Header */
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 18px;
+    gap: 20px;
+}
+
+.exp-role {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.exp-company {
+    color: var(--sec-clr);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.exp-product {
+    color: #a0a0a0;
+    font-weight: 400;
+}
+
+.exp-header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.exp-type {
+    background: rgba(69, 69, 247, 0.2);
+    color: var(--sec-clr);
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.exp-duration {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.exp-location {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+/* Experience Points */
+.exp-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.exp-points li {
+    color: #d0d0d0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 6px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.exp-points li::before {
+    content: '▹';
+    color: var(--sec-clr);
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+}
+
+/* Achievements Section */
+.achievements-section {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.achievements-heading {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.achievements-heading span {
+    color: var(--sec-clr);
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.achievement-card {
+    background: rgba(48, 79, 253, 0.08);
+    border: 1px solid rgba(69, 69, 247, 0.3);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+    border-color: var(--sec-clr);
+    box-shadow: 0 4px 25px rgba(69, 69, 247, 0.15);
+    transform: translateY(-3px);
+}
+
+.achievement-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.achievement-info h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.achievement-info p {
+    color: #a0a0a0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media screen and (max-width: 950px) {
+    .experience {
+        padding: 50px 8vw;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .exp-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .exp-header-right {
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .timeline {
+        padding-left: 30px;
+    }
+
+    .timeline::before {
+        left: 12px;
+    }
+
+    .timeline-dot {
+        left: -27px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .timeline-item:first-child .timeline-dot {
+        left: -29px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .timeline-content {
+        padding: 20px 18px;
+    }
+
+    .exp-role {
+        font-size: 1.2rem;
+    }
+
+    .exp-company {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .experience {
+        padding: 50px 5vw;
+    }
+
+    .timeline-content {
+        padding: 16px 14px;
+    }
+}
