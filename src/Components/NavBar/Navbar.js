@@ -1,6 +1,6 @@
 import './Navbar.css';
 import { useState } from 'react';
-import logo from '../../Assets/R-logo-bg.png';
+
 export default function Navbar() {
     const [active, setActive] = useState(false);
     function toggleActive() {
